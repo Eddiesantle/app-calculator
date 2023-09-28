@@ -24,7 +24,10 @@ const Button = ({onClick, label, double, triple, operation}: PropsButton) => {
   }
 
   return (
-    <TouchableHighlight onPress={() => onClick(label)}>
+    <TouchableHighlight
+      activeOpacity={0.3}
+      underlayColor="#2c2c2c"
+      onPress={() => onClick(label)}>
       <Text style={stylesButton}>{label}</Text>
     </TouchableHighlight>
   );
@@ -33,23 +36,35 @@ const Button = ({onClick, label, double, triple, operation}: PropsButton) => {
 const styles = StyleSheet.create({
   button: {
     fontSize: 40,
-    height: Dimensions.get('window').width / 4,
-    width: Dimensions.get('window').width / 4,
-    padding: 20,
-    backgroundColor: '#f0f0f0',
+    height: Dimensions.get('window').width / 5,
+    width: Dimensions.get('window').width / 5,
+    padding: 15,
+    margin: 5,
+    backgroundColor: '#2c2c2c',
+    color: '#fff',
     textAlign: 'center',
     borderWidth: 1,
-    borderColor: '#888',
+    borderRadius: 20,
+    borderColor: '#2c2c2c',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+
+    elevation: 10,
   },
   operationButton: {
     color: '#fff',
     backgroundColor: '#fa8231',
   },
   buttonDouble: {
-    width: (Dimensions.get('window').width / 4) * 2,
+    width: (Dimensions.get('window').width / 4) * 1.7,
   },
   buttonTriple: {
-    width: (Dimensions.get('window').width / 4) * 3,
+    width: (Dimensions.get('window').width / 4) * 2.6,
   },
 });
 

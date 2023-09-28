@@ -17,10 +17,10 @@ const Display = ({value}: PropsDisplay) => {
 const styles = StyleSheet.create({
   display: {
     flex: 1,
-    height: Dimensions.get('window').width / 1.2,
+    height: Dimensions.get('window').width / 1.13,
     padding: 20,
     justifyContent: 'center',
-    backgroundColor: 'rgba(0,0,0,0.6)',
+    backgroundColor: '#1f1f1f',
     alignItems: 'flex-end',
   },
   displayValue: {
